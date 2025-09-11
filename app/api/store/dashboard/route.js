@@ -24,7 +24,7 @@ export async function GET(request){
         const dashboardData = {
             ratings,
             totalOrders: orders.length,
-            totalEarnings: Math.round(orders.reduce((acc, order)=> acc + orderDummyData.total, 0)),
+            totalEarnings: Math.round(orders.reduce((acc, order)=> acc + order.total, 0)),
             totalProducts: products.length
         }
 
